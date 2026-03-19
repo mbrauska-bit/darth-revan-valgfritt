@@ -1,0 +1,50 @@
+/* Bakgrunn og overlay */
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+/* Overlay */
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background: url("vibe.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+/* Container */
+.container {
+    text-align: center;
+    position: relative
+}
+/* Tekst */
+h1.main-title {
+    font-size: 36px;
+    color: #ff00ff; /* neon lilla */
+    font-style: italic;
+    text-shadow: 5px #ff00ff, 10px #ff00ff, 20px #ff00ff;
+    margin-bottom: 20px;
+}
+.main-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #00ffff; /* neon cyan */
+    font-style: italic;
+}
+/* Spill-galleri */
+.games {
+    display: flex;
+    justify-content: center;
+}
+.game-img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid #00ff37; /* neon lilla */
+    border-radius: 15px;
+    box-shadow: 0 0 10px #5ca950, 0 0 20px #789832;
+    transition: transform 0.3s, box-shadow 0.3s;
+}

@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: white;
+}
+.overlay {
+    width: 100%;
+    height: 100vh;
+    /* Husk å sjekke om stien ../ stemmer med der du har bildet ditt */
+    background: url("1980.jpg") center/cover no-repeat; 
+    
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    /* Sentrerer alt horisontalt */
+    justify-content: flex-start; /* Starter innholdet fra toppen */
+    padding-top: 20px;      /* Gir overskriften litt luft fra kanten */
+}
+h1 {
+    margin: 0 0 20px 0;    /* Fjerner standard marg og gir litt luft under til spillet */
+    font-size: 3rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+#board {
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3); /* Grønn glød for Snake! */
+    background-color: black;
+    /* Denne linjen dytter brettet ned til midten hvis det er mye plass */
+    margin-top: auto;
+    margin-bottom: auto;
+}

@@ -1,0 +1,67 @@
+/* 1. Grunnleggende oppsett for hele siden */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: white;
+    overflow: hidden; /* Hindrer at man kan scrolle på selve nettsiden */
+}
+
+/* 2. Bakteppet for hele skjermen */
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    
+    /* Siden 1980.jpg ligger i samme mappe som denne CSS-fila: */
+    background: url("1980.jpg") center/cover no-repeat; 
+    
+    display: flex;
+    flex-direction: column;    /* Legger ting under hverandre */
+    align-items: center;       /* Sentrerer horisontalt */
+    justify-content: flex-start; /* Starter innholdet fra toppen */
+    padding-top: 40px;         /* Gir overskriften litt luft fra kanten */
+}
+
+/* 3. Overskriften på toppen */
+h1 {
+    font-size: 3rem;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    color: #ff00ff; /* Neon rosa/lilla */
+    text-shadow: 3px 3px 0px #00ffff, 6px 6px 15px rgba(0,0,0,0.5);
+}
+
+/* 4. Beholder for selve spillet */
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Lar denne delen ta opp resten av plassen på skjermen */
+}
+
+/* 5. Selve spillbrettet (Canvas) */
+#board {
+    /* Bakgrunnen inne i SELVE spillet */
+    /* Vi går ut av css-mappa for å finne bildemappa */
+    background-image: url("../imagegames/background.png"); 
+    background-size: contain;
+    background-repeat: repeat-y; /* Doodle Jump-bakgrunner repeteres ofte nedover */
+    
+    border: 6px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    
+    /* Doodle Jump er vanligvis høyt og smalt */
+    max-width: 100%;
+    max-height: 80vh; 
+}
+
+/* 6. Instruksjonstekst nederst */
+.controls-hint {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
