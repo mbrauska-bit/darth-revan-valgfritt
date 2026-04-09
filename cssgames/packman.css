@@ -1,15 +1,69 @@
+:root {
+    --page-bg: #050505;
+    --panel-bg: rgba(0, 0, 0, 0.7);
+    --text-color: #ffffff;
+    --button-bg: #ffe066;
+    --button-text: #111111;
+    --button-border: #ffd43b;
+}
+
+body.light-mode {
+    --page-bg: #f5efe2;
+    --panel-bg: rgba(255, 248, 230, 0.88);
+    --text-color: #1f1f1f;
+    --button-bg: #1f1f1f;
+    --button-text: #f5efe2;
+    --button-border: #1f1f1f;
+}
+
 body{
+    margin: 0;
     text-align: center;
+    background-color: var(--page-bg);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
+
 #board{
-    background-color: black;
+    display: block;
+    margin: 0 auto 24px;
+    border: 4px solid var(--button-border);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
 }
-.overlay {
+
+.overlay{
     width: 100%;
-    height: 100vh;
-    background: url("1980.jpg") center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 24px;
+    box-sizing: border-box;
+    background: var(--panel-bg);
     position: relative;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.overlay h1 {
+    margin: 0;
+}
+
+#themeToggle {
+    border: 2px solid var(--button-border);
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+#themeToggle:hover {
+    transform: translateY(-1px);
+}
+
+#themeToggle:active {
+    transform: translateY(0);
+}
